@@ -1,34 +1,89 @@
 {
-  "name": "serene-resources",
-  "version": "0.1.0",
+  "_args": [
+    [
+      "serene-resources",
+      "/home/stewart/Projects/serene"
+    ]
+  ],
+  "_from": "serene-resources@latest",
+  "_id": "serene-resources@0.2.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/serene-resources",
+  "_nodeVersion": "5.1.0",
+  "_npmOperationalInternal": {
+    "host": "packages-13-west.internal.npmjs.com",
+    "tmp": "tmp/serene-resources-0.2.0.tgz_1458740604633_0.8740621516481042"
+  },
+  "_npmUser": {
+    "email": "stewartml@gmail.com",
+    "name": "stewartml"
+  },
+  "_npmVersion": "3.8.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "serene-resources",
+    "raw": "serene-resources",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/serene-resources/-/serene-resources-0.2.0.tgz",
+  "_shasum": "9eabcc8976a31d41766648b147489437bfde4685",
+  "_shrinkwrap": null,
+  "_spec": "serene-resources",
+  "_where": "/home/stewart/Projects/serene",
+  "author": {
+    "name": "Stewart MacKenzie-Leigh"
+  },
+  "bugs": {
+    "url": "https://github.com/stugotech/serene-resources/issues"
+  },
+  "dependencies": {
+    "http-status-errors": "^1.0.0",
+    "require-all": "^2.0.0",
+    "serene": "^0.9.0"
+  },
   "description": "Serene middleware to add a resource description to the request",
-  "main": "index.js",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "serene": "^0.8.0"
+  },
   "directories": {
     "test": "test"
   },
-  "scripts": {
-    "test": "mocha"
+  "dist": {
+    "shasum": "9eabcc8976a31d41766648b147489437bfde4685",
+    "tarball": "http://registry.npmjs.org/serene-resources/-/serene-resources-0.2.0.tgz"
   },
+  "gitHead": "0c7a7bd6377522cf1d2c890d1f1bda3ae456416f",
+  "homepage": "https://github.com/stugotech/serene-resources#readme",
+  "keywords": [
+    "api",
+    "json",
+    "serene"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "stewartml",
+      "email": "stewartml@gmail.com"
+    }
+  ],
+  "name": "serene-resources",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stugotech/serene-resources.git"
   },
-  "keywords": [
-    "serene",
-    "json",
-    "api"
-  ],
-  "author": "Stewart MacKenzie-Leigh",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/stugotech/serene-resources/issues"
+  "scripts": {
+    "test": "mocha"
   },
-  "homepage": "https://github.com/stugotech/serene-resources#readme",
-  "dependencies": {
-    "http-status-errors": "^1.0.0"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "serene": "^0.8.0"
-  }
+  "version": "0.2.0"
 }
