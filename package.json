@@ -1,6 +1,6 @@
 {
   "name": "serene-resources",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Serene middleware to add a resource description to the request",
   "main": "index.js",
   "directories": {
@@ -27,8 +27,7 @@
   "homepage": "https://github.com/stugotech/serene-resources#readme",
   "dependencies": {
     "http-status-errors": "^1.0.0",
-    "require-all": "^2.0.0",
-    "serene": "^0.10.0"
+    "require-all": "^2.0.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -40,6 +39,9 @@
     "grunt-contrib-clean": "^1.0.0",
     "load-grunt-tasks": "^3.4.1",
     "mocha": "^2.4.5",
-    "serene": "^0.8.0"
+    "serene": "^0.10.0"
+  },
+  "peerDependencies": {
+    "serene": "^0.10.0"
   }
 }
