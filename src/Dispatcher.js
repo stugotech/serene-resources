@@ -15,7 +15,7 @@ export default class Dispatcher {
     if (handler) {
       handler(request, response);
     } else if (this.errorOnNoHandler) {
-      throw new MethodNotAllowedError(`operation ${request.operation} not allowed for resource ${request.resourceName}`);
+      throw new MethodNotAllowedError(`operation ${request.operation.name} not allowed for resource ${request.resourceName}`);
     }
   }
 };
