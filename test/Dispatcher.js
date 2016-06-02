@@ -59,4 +59,23 @@ describe('Dispatcher', function () {
         expect(response.result).to.equal('hello');
       });
   });
+
+  it('should handle promises', function () {
+    service.use(new Dispatcher());
+
+    resources.widgets.list = function (request, response) {
+      return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          response.end();
+          resolve();
+        }, 100);
+      });
+    };
+
+    service.use(function () {
+      throw new Error('should not run');
+    });
+
+    return service.dispatch('list', 'widgets');
+  });
 });

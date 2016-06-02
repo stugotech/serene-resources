@@ -13,7 +13,8 @@ export default class Dispatcher {
     let handler = request.resource[request.operation.name];
 
     if (handler) {
-      handler(request, response);
+      return handler(request, response);
+      
     } else if (this.errorOnNoHandler) {
       throw new MethodNotAllowedError(`operation ${request.operation.name} not allowed for resource ${request.resourceName}`);
     }
