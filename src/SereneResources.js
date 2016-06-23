@@ -1,6 +1,9 @@
 
 import requireAll from 'require-all';
 import {NotFoundError} from 'http-status-errors';
+import debug from 'debug';
+
+const traceRequest = debug('serene-resources:request');
 
 
 export default class SereneResources {
@@ -29,6 +32,7 @@ export default class SereneResources {
 
 
   handle(request, response) {
+    traceRequest(`setting resource for ${request.resourceName}`)
     let resource = this.resources[request.resourceName];
 
     if (!resource)
