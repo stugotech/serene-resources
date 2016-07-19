@@ -1,6 +1,6 @@
 {
   "name": "serene-resources",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Serene middleware to add a resource description to the request",
   "main": "index.js",
   "directories": {
@@ -40,9 +40,9 @@
     "grunt-contrib-clean": "^1.0.0",
     "load-grunt-tasks": "^3.4.1",
     "mocha": "^2.4.5",
-    "serene": "^0.14.0"
+    "serene": "^0.20.0"
   },
   "peerDependencies": {
-    "serene": "^0.14.0"
+    "serene": "^0.20.0"
   }
 }
