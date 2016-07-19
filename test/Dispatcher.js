@@ -33,6 +33,20 @@ describe('Dispatcher', function () {
       });
   });
 
+  it('should dispatch to hook handler', function () {
+    service.use(new Dispatcher(true, 'hook'));
+
+    resources.widgets.list_hook = function (request, response) {
+      expect(request.resource.foo).to.equal('bar');
+      response.result = 'hello';
+    };
+
+    return service.dispatch('list', 'widgets')
+      .then(function (response) {
+        expect(response.result).to.equal('hello');
+      });
+  });
+
   it('should 405 if handler isn\'t defined', function () {
     service.use(new Dispatcher());
 

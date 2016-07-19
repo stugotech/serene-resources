@@ -6,15 +6,23 @@ const traceRequest = debug('serene-resources:dispatcher');
 
 
 export default class Dispatcher {
-  constructor(errorOnNoHandler) {
+  constructor(errorOnNoHandler, hook) {
     this.errorOnNoHandler = typeof errorOnNoHandler === 'undefined' ? true : errorOnNoHandler;
+    this.hook = hook;
   }
 
   handle(request, response) {
     if (!request.resource)
       throw new Error('no request.resource: you need to use SereneResources before SereneResources.Dispatcher');
 
-    let handler = request.resource[request.operation.name];
+    let handler;
+
+    if (!this.hook) {
+      handler = request.resource[request.operation.name];
+    } else {
+      handler = request.resource[request.operation.name + '_' + this.hook];
+    }
+
     traceRequest(`dispatching ${request.operation.name}:${request.resourceName}`);
 
     if (handler) {
